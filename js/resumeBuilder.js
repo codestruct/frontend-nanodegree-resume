@@ -18,6 +18,51 @@ Dot.Notation or
 "Object":"Literal"
 */
 
+//Create bio object
+var bio = {
+	"name":"Helen Shiu",
+	"role":"Designer & Developer",
+	"contact" : {
+		"email" : "hello@helenshiu.com",
+		"phone" : "4166288054",
+		"github" : "https://github.com/quilt9",
+		"twitter" : "@quilt9design",
+		"linkedin" : "https://www.linkedin.com/in/helenshiu",
+		"location" : "Toronto, Canada"
+		},
+	"welcome" : "Hello, I am Helen and I am all about creating good online user experience.",
+	"skills" : ["Visual Design", "HTML", "CSS", "Responsive Design", "BootStrap", "Wireframe"],
+	"bioPict" : "images/Half-100X100.jpg"
+};
+
+//Create education object
+var education = {
+	"schools" : [
+		{
+			"name" : "OCAD U",
+			"city" : "Toronto, Canada",
+			"degree" : "BDes",
+			"major" : "Communication Design"
+		},
+		{
+			"name" : "Akendi",
+			"city" : "Toronto, Canada",
+			"cert" : "Certification",
+			"course" : "UX Design",
+			"license" : "CXD-901-15-129",
+			"link" : "http://www.akendi.ca/ux-training/"
+		}
+	],
+	"onlineCourses" : [
+		{
+			"title" : "Front-End Web Developer Nanodegree",
+			"school" : "Udacity",
+			"dates" : 2015,
+			"link" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+		}
+	]
+};
+
 //Create work object
 var work = {
 	"jobs" : [
@@ -71,50 +116,7 @@ var projects = {
     ]
 }
 
-//Create bio object
-var bio = {
-	"name":"Helen Shiu",
-	"role":"Designer & Developer",
-	"contact" : {
-		"email" : "hello@helenshiu.com",
-		"phone" : "4166288054",
-		"github" : "https://github.com/quilt9",
-		"twitter" : "@quilt9design",
-		"linkedin" : "https://www.linkedin.com/in/helenshiu",
-		"location" : "Toronto, Canada"
-		},
-	"welcome" : "Hello, I am Helen and I am all about creating good online user experience.",
-	"skills" : ["Visual Design", "HTML", "CSS", "Responsive Design", "BootStrap", "Wireframe"],
-	"bioPict" : "images/Half-100X100.jpg"
-};
 
-//Create education object
-var education = {
-	"schools" : [
-		{
-			"name" : "OCAD U",
-			"city" : "Toronto, Canada",
-			"degree" : "BDes",
-			"major" : "Communication Design"
-		},
-		{
-			"name" : "Akendi",
-			"city" : "Toronto, Canada",
-			"cert" : "Certification",
-			"course" : "UX Design",
-			"license" : "CXD-901-15-129",
-			"link" : "http://www.akendi.ca/ux-training/"
-		}
-	],
-	"onlineCourses" : [
-		{
-			"title" : "Front-End Web Developer Nanodegree",
-			"school" : "Udacity",
-			"dates" : 2015,
-			"link" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
-		}
-	]
-};
 
 //Create two new variables for my Name and Role
 
