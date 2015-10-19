@@ -18,8 +18,17 @@ $('#main').append(internationalizeButton);
 
 
 //create a function called inName() that takes a string of two names and
+function inName(name){
+    name = name.trim().split(" ");
+    name[1] = name[1].toUpperCase();
+    name[0] = name[0].slice(0,1).toLowerCase() + name[0].slice(1).toLowerCase();
+    return name[0] +" "+name[1];
+};
+
+/*create a function called inName() that takes a string of two names and
 function inName(iName){
     var myNameArray = iName.split(" ");
     var internationalizedName = iName.replace("Shiu", myNameArray[1].toUpperCase());
     $('#name').html(internationalizedName);
 };
+*/
