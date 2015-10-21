@@ -1,22 +1,21 @@
-//$("#main").append(["Helen Shiu!"]);
+'use strict';
 
-/*
-var awesomeThoughts = "I am Helen and I am AWESOME!";
-var funThoughts = awesomeThoughts.replace("AWESOME", "FUN");
-$("#main").append(funThoughts);
-*/
-
-/*
-Need to create four objects:
-Work
-Project
-Bio
-Education
-Use:
-["Bracket Notation"] or
-Dot.Notation or
-"Object":"Literal"
-*/
+//Create bio object
+var bio = {
+	"name":"Helen Shiu",
+	"role":"Designer & Developer",
+	"contact" : {
+		"email" : "hello@helenshiu.com",
+		"phone" : "4166288054",
+		"github" : "https://github.com/quilt9",
+		"twitter" : "@quilt9design",
+		"linkedin" : "https://www.linkedin.com/in/helenshiu",
+		"location" : "Toronto, Canada"
+		},
+	"welcome" : "Hello, I am Helen, a detail-oriented and result-focused creative troubleshooter who brings a broad design and development technology knowledge in both print and web to companies that are eager to meet the challenges brought on by the rapid pace of disruption in the business world today.",
+	"skills" : ["Visual Design", "HTML", "CSS", "Responsive Design", "BootStrap", "Wireframe"],
+	"bioPict" : "images/Half-100X100.jpg"
+};
 
 //Create work object
 var work = {
@@ -39,54 +38,61 @@ var work = {
 }
 
 //Create project object
-var projects = {
-    "project": [
+var allProjects = {
+    "projects": [
         {
             "title": "Bootstrap Responsive Website",
-            "date": "2013",
+            "dates": "2013",
             "description": "Use Bootstrap to create demo website to demonstrate responsiveness across different devices.",
-            "image": {
+            "images": {
                 "src": "images/Bootstrap_Responsive_Web.jpg",
                 "name": "Restaurant Website"
             }
         },
         {
             "title": "Single-Page Landing Page",
-            "date": "2015",
+            "dates": "2015",
             "description": "A fast deployment of a landing page built with Bootstrap.",
-            "image": {
+            "images": {
                 "src": "images/xmas_780x780.jpg",
                 "name": "Landing Page"
             }
         },
         {
             "title": "WordPress Website Design Development",
-            "date": "2015",
+            "dates": "2015",
             "description": "Use WordPress to create a demo site.",
-            "image": {
-                "src": "Website_Design_Development.jpg",
+            "images": {
+                "src": "images/Website_Design_Development.jpg",
                 "name": "WordPress Website"
             }
+            
         }
     ]
-}
-
-//Create bio object
-var bio = {
-	"name":"Helen Shiu",
-	"role":"Designer & Developer",
-	"contact" : {
-		"email" : "hello@helenshiu.com",
-		"phone" : "4166288054",
-		"github" : "https://github.com/quilt9",
-		"twitter" : "@quilt9design",
-		"linkedin" : "https://www.linkedin.com/in/helenshiu",
-		"location" : "Toronto, Canada"
-		},
-	"welcome" : "Hello, I am Helen and I am all about creating good online user experience.",
-	"skills" : ["Visual Design", "HTML", "CSS", "Responsive Design", "BootStrap", "Wireframe"],
-	"bioPict" : "images/Half-100X100.jpg"
 };
+
+projects.display = function(){
+
+		var myProjects = allProjects.projects;
+		//Write a for-in loop that iterates over all the projects in my projects objects.
+		for (var i=0; i<myProjects.length; i++) {
+			for(var key in myProjects){
+				var projectItem = myProjects[i];
+			 	var formattedProjectTitle = HTMLprojectTitle.replace('%data%', projectItem.title);
+			 	var formattedprojectDates = HTMLprojectDates.replace('%data%', projectItem.dates);
+			 	var formattedprojectDescription = HTMLprojectDescription.replace('%data%', projectItem.description);
+			 	var formattedprojectImage = HTMLprojectImage.replace('%data%', projectItem.images.src); 
+			}
+	 	$('#projects:last').append(HTMLprojectStart);
+	 	$('.project-entry:last').append(formattedProjectTitle);
+	 	$('.project-entry:last').append(formattedprojectDates);
+	 	$('.project-entry:last').append(formattedprojectDescription);
+	 	$('.project-entry:last').append(formattedprojectImage);
+		}
+	}
+projects.display();
+
+
 
 //Create education object
 var education = {
