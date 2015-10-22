@@ -12,10 +12,31 @@ var bio = {
 		"linkedin" : "https://www.linkedin.com/in/helenshiu",
 		"location" : "Toronto, Canada"
 		},
-	"welcome" : "Hello, I am Helen, a detail-oriented and result-focused creative troubleshooter who brings a broad design and development technology knowledge in both print and web to companies that are eager to meet the challenges brought on by the rapid pace of disruption in the business world today.",
+	"welcome" : "Hello, my name is Helen. I am an UI Designer and Developer who is all about creating good online user experience.",
 	"skills" : ["Visual Design", "HTML", "CSS", "Responsive Design", "BootStrap", "Wireframe"],
 	"bioPict" : "images/Half-100X100.jpg"
 };
+bio.display = function(){
+ 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcome);
+	var formattedContact = HTMLcontactGeneric.replace("%contact%", "eMail").replace("%data%", bio.contact.email);
+	var formattedMobile = HTMLmobile.replace("%data%", bio.contact.phone);
+	var formattedLocation = HTMLlocation.replace("%data%", bio.contact.location);
+	var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
+	var formattedSkills = HTMLskills.replace("%data%", bio.skills);
+	var formattedPict = HTMLbioPic.replace("%data%", bio.bioPict);
+	$("#header").prepend(formattedName);
+	$('h1#name').append(formattedRole);
+	$("#header").append(formattedPict);
+	$("#header").append(formattedWelcome);
+	$("#header").append(HTMLskillsStart);
+	$("ul#skills").append(formattedSkills);
+	$("ul#topContacts").append(formattedContact);
+	$("ul#topContacts").append(formattedMobile);
+	$("ul#topContacts").append(formattedLocation);
+}
+bio.display();
 
 //Create work object
 var work = {
@@ -35,7 +56,44 @@ var work = {
 			"description" : "Created online marketing banners, e-blast campaign, infographic, graphic elements for social marketing campaigns on mobile platform and wireframe with minimal supervision."	
 		}
 	]
-}
+};
+/* 
+1. Write a for-in loop that iterates over all the jobs in my work objects and,
+2. append a new HTMLworkStart element for each one and,
+3. formats each job's employer with HTMLworkEmployer and each job title with HTMLworkTitle and,
+4. append a concatenation of employer and title each to the element with class work-entry:last.
+*/
+
+work.display = function() {
+	var myJobs = work.jobs;
+	var jobItems = work.jobs.length;
+
+	//2. append a new HTMLworkStart element for each one and,
+	$('#workExperience').append(HTMLworkStart);
+
+    //1. Write a for-in loop that iterates over all the jobs in my work objects and,
+    for (var i=0; i<jobItems; i++) {
+
+        var jobItem = myJobs[i];
+
+    	for(var key in jobItem) {
+            //3. formats each job's employer with HTMLworkEmployer and each job title with HTMLworkTitle and,
+            var formattedEmployer = HTMLworkEmployer.replace("%data%", jobItem.employer);
+		    var formattedTitle = HTMLworkTitle.replace("%data%", jobItem.title);	
+	      	var formattedDates = HTMLworkDates.replace("%data%", jobItem.dates);	
+	      	var formattedLocation = HTMLworkLocation.replace("%data%", jobItem.location);	
+	      	var formattedDescription = HTMLworkDescription.replace("%data%", jobItem.description);
+	      	//4. append a concatenation of employer and title each to the element with class work-entry:last.
+       		var employerTitle = formattedEmployer + formattedTitle;
+   		};
+	        $('.work-entry:last').append(employerTitle);
+	        $('.work-entry:last').append(formattedDates);
+	        $('.work-entry:last').append(formattedLocation);
+	        $('.work-entry:last').append(formattedDescription);
+    }
+
+};
+work.display();
 
 //Create project object
 var allProjects = {
@@ -72,24 +130,23 @@ var allProjects = {
 };
 
 projects.display = function(){
-
-		var myProjects = allProjects.projects;
-		//Write a for-in loop that iterates over all the projects in my projects objects.
-		for (var i=0; i<myProjects.length; i++) {
-			for(var key in myProjects){
-				var projectItem = myProjects[i];
-			 	var formattedProjectTitle = HTMLprojectTitle.replace('%data%', projectItem.title);
-			 	var formattedprojectDates = HTMLprojectDates.replace('%data%', projectItem.dates);
-			 	var formattedprojectDescription = HTMLprojectDescription.replace('%data%', projectItem.description);
-			 	var formattedprojectImage = HTMLprojectImage.replace('%data%', projectItem.images.src); 
-			}
-	 	$('#projects:last').append(HTMLprojectStart);
-	 	$('.project-entry:last').append(formattedProjectTitle);
-	 	$('.project-entry:last').append(formattedprojectDates);
-	 	$('.project-entry:last').append(formattedprojectDescription);
-	 	$('.project-entry:last').append(formattedprojectImage);
+	var myProjects = allProjects.projects;
+	//Write a for-in loop that iterates over all the projects in my projects objects.
+	for (var i=0; i<myProjects.length; i++) {
+		for(var key in myProjects){
+			var projectItem = myProjects[i];
+		 	var formattedProjectTitle = HTMLprojectTitle.replace('%data%', projectItem.title);
+		 	var formattedprojectDates = HTMLprojectDates.replace('%data%', projectItem.dates);
+		 	var formattedprojectDescription = HTMLprojectDescription.replace('%data%', projectItem.description);
+		 	var formattedprojectImage = HTMLprojectImage.replace('%data%', projectItem.images.src); 
 		}
+ 	$('#projects:last').append(HTMLprojectStart);
+ 	$('.project-entry:last').append(formattedProjectTitle);
+ 	$('.project-entry:last').append(formattedprojectDates);
+ 	$('.project-entry:last').append(formattedprojectDescription);
+ 	$('.project-entry:last').append(formattedprojectImage);
 	}
+}
 projects.display();
 
 
@@ -122,28 +179,18 @@ var education = {
 	]
 };
 
+//To see a map
+$('#mapDiv').append(googleMap);
+
 //Create two new variables for my Name and Role
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcome);
-var formattedContact = HTMLcontactGeneric.replace("%contact%", "eMail").replace("%data%", bio.contact.email);
-var formattedMobile = HTMLmobile.replace("%data%", bio.contact.phone);
-var formattedLocation = HTMLlocation.replace("%data%", bio.contact.location);
+
 //var formattedSchool = HTMLschoolName.replace("%data%", education.schools.name(0));
 //var formattedPosition = HTMLworkTitle.replace("%data%", work.position);
-var formattedSkills = HTMLskills.replace("%data%", bio.skills);
-var formattedPict = HTMLbioPic.replace("%data%", bio.bioPict);
+
 //Format my Name and Role and either append or prepend to the page
-$("#header").prepend(formattedName).append(formattedRole);
-$("#header").append(formattedPict);
-$("#header").append(formattedWelcome);
-$("#header").append(formattedContact);
-$("#header").append(formattedMobile);
-$("#header").append(formattedLocation);
+
 //$("#header").append(formattedSchool);
 //$("#header").append(formattedPosition);
-//$("#header").append(HTMLskillsStart);
-//$("#header").append(formattedSkills);
 
 
