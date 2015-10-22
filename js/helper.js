@@ -45,9 +45,17 @@ var HTMLprojectImage = '<img src="%data%">';
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
+var HTMLschoolCert = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+
+var HTMLelectedName = '<a href="#">%data%';
+var HTMLelectedCourse = ' -- %data%</a>';
+var HTMLelectedCert = ' -- %data%</a>';
+var HTMLelectedDates = '<div class="date-text">%data%</div>';
+var HTMLelectedLocation = '<div class="location-text">%data%</div>';
+var HTMLelectedLicense = '<em><br>Major: %data%</em>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
@@ -86,6 +94,10 @@ function logClicks(x,y) {
 
 $(document).click(function(loc) {
   // your code goes here!
+  var x = loc.pageX;
+  var y = loc.pageY;
+
+  logClicks(x,y);
 });
 
 
@@ -106,7 +118,10 @@ function initializeMap() {
   var locations;
 
   var mapOptions = {
-    disableDefaultUI: true
+    //disableDefaultUI: true,
+    center: new google.maps.LatLng(43.653226, -79.3831843),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
   };
 
   /* 
@@ -173,6 +188,7 @@ function initializeMap() {
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
+      infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
