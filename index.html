@@ -21,8 +21,11 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <!-- Tells the browser what the title of this page should be. -->
   <title>Resume</title>
 
+  <!-- To ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Load the page styles. -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
 
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
@@ -37,10 +40,20 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   the DOM. jQuery is fast and easy to use, but it doesn't do anything
   you can't accomplish with vanilla (regular) JavaScript.
   -->
+  <!-- Helen's comment. Final decision on using Bootstrap framework to add responsiveness. OCT29-->
   <script src="js/jQuery.js"></script>
 
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive
@@ -48,10 +61,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   -->
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
-  <meta name="viewport" content="width=device-width">
 </head>
 <body>
-  <div id="main">
+  <div id="wrapper">
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -59,10 +71,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content clear-fix">
+  <div class="container">
+    <header class="center-content clear-fix row">
       <ul id="topContacts" class="flex-box"></ul>
-    </div>
+    </header>
     <div style="clear: both;"></div>
+    <nav class="row">
+    </nav>
     <div id="workExperience" class="gray">
       <h2>Work Experience</h2>
     </div>
@@ -80,7 +95,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         <ul id="footerContacts" class="flex-box">
       </ul>
     </div>
-  </div>
+  </div><!-- /.container -->
 
   <!--
   The next line tells the browser where to download the JavaScript file you'll be
@@ -136,7 +151,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       document.getElementById('topContacts').style.display = 'none';
     }
     if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
+      document.getElementsByName('header').style.display = 'none';
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
       document.getElementById('workExperience').style.display = 'none';
@@ -154,5 +169,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       document.getElementById('mapDiv').style.display = 'none';
     }
   </script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

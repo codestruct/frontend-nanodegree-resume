@@ -128,7 +128,7 @@ a {
 }
 
 /* TODO: Replace with image later */
-#header {
+header {
   background-color: #484848;
 }
 
@@ -168,7 +168,13 @@ span {
   text-align: center;
 }
 
-/* Media queries to handle various device widths */
+/* Media queries to handle various device widths 
+Responsive Breakpoints
+Small - 480px & under - col-xs
+Medium - 481px / 592px - col-xm
+Large - 593px / 1279px - col-md
+Desktop - 1280px & over - col-lg
+*/
 
 @media only screen and (max-width: 1024px) {
   #lets-connect {
