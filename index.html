@@ -49,9 +49,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width">
+  <!-- Bootstrap 
+  <link href="css/bootstrap.css" rel="stylesheet">
+  -->
 </head>
 <body>
-  <div id="main">
+  <div id="wrapper">
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -59,9 +62,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header" class="center-content clear-fix">
+    <header class="center-content clear-fix">
       <ul id="topContacts" class="flex-box"></ul>
-    </div>
+    </header>
     <div style="clear: both;"></div>
     <div id="workExperience" class="gray">
       <h2>Work Experience</h2>
@@ -88,26 +91,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   dynamically when this website, index.html, is opened.
   -->
   <script src="js/resumeBuilder.js"></script>
-  
-  <!-- Helen's js -->
-  <!-- if statement exercise js 
-  <script src="exercises_js/if.js"></script>
-  -->
-  <!-- for exercise.js
-  <script src="exercises_js/for.js"></script>
-  -->
-  <!-- function exercise.js 
-  <script src="exercises_js/function.js"></script>
-  -->
-  <!-- Collecting Click Locations quiz in Lesson 2
-  <script src="exercises_js/function_click.js"></script>
-  -->
-  <!-- Internationalize Names Quiz in Lesson 2
-  <script src="exercises_js/internationalizeNames.js"></script>
-  -->
-  <!-- encapsulating.js 
-  <script src="exercises_js/encapsulating.js"></script>
-  -->
   
   <!--
   These scripts are written in JavaScript. You'll be breaking them down as part of
@@ -136,7 +119,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       document.getElementById('topContacts').style.display = 'none';
     }
     if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
+      document.getElementsByName('header').style.display = 'none';
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
       document.getElementById('workExperience').style.display = 'none';
@@ -154,5 +137,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       document.getElementById('mapDiv').style.display = 'none';
     }
   </script>
+
+  <!-- javascript -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>

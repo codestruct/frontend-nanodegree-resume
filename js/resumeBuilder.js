@@ -26,11 +26,11 @@ bio.display = function(){
 	var formattedLocation = HTMLlocation.replace("%data%", bio.contact.city);
 	var formattedSkills = HTMLskills.replace("%data%", bio.skills);
 	var formattedPict = HTMLbioPic.replace("%data%", bio.bioPict);
-	$("#header").prepend(formattedName);
+	$("header").prepend(formattedName);
 	$('h1#name').append(formattedRole);
-	$("#header").append(formattedPict);
-	$("#header").append(formattedWelcome);
-	$("#header").append(HTMLskillsStart);
+	$("header").append(formattedPict);
+	$("header").append(formattedWelcome);
+	$("header").append(HTMLskillsStart);
 	$("ul#skills").append(formattedSkills);
 	$("ul#topContacts").append(formattedContact);
 	$("ul#topContacts").append(formattedMobile);
