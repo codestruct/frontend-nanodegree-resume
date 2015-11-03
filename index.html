@@ -49,42 +49,81 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width">
-  <!-- Bootstrap 
+  <!-- Bootstrap -->
   <link href="css/bootstrap.css" rel="stylesheet">
-  -->
+  
 </head>
 <body>
   <div id="wrapper">
+    <div class="container">
+      <!--
+      Everything from here to the <script> tag below is the skeleton of your
+      website. Your code will add information to each of the sections of the
+      resume below. You can pretty easily figure out what each section will
+      display by looking at the id or at what's written between the <h2> tags.
+      -->
+      <div id="header" class="center-content clear-fix row">
+        <header>
+          <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+              </div>
 
-    <!--
-    Everything from here to the <script> tag below is the skeleton of your
-    website. Your code will add information to each of the sections of the
-    resume below. You can pretty easily figure out what each section will
-    display by looking at the id or at what's written between the <h2> tags.
-    -->
-    <header class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
-    </header>
-    <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
-    </div>
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
-    <div id="education" class="gray">
-      <h2>Education</h2>
-    </div>
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-      </ul>
-    </div>
-  </div>
-
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                  <li><a href="#">Link</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">Link</a></li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+          <ul id="topContacts" class="flex-box"></ul>
+        </header>        
+      </div><!-- /#header -->
+      <div style="clear: both;"></div>
+      <article>
+        <div id="workExperience" class="gray row">
+          <section>
+            <h2>Work Experience</h2>
+          </section>
+        </div><!-- /#workExperience -->
+        <div id="projects" class="row">
+          <section>
+            <h2>Projects</h2>
+          </section>
+        </div><!-- /#projects -->
+        <div id="education" class="gray row">
+          <section>
+            <h2>Education</h2>
+          </section>
+        </div><!-- /#education -->
+        <div id="mapDiv" class="gray row">
+          <section>
+            <h2>Where I've Lived and Worked</h2>
+          </section>
+        </div><!-- /#mapDiv -->
+        <div id="lets-connect" class="dark-gray row">
+          <section>
+            <h2 class="orange center-text">Let's Connect</h2>
+            <ul id="footerContacts" class="flex-box"></ul>
+          </section>
+        </div><!-- /#lets-connect -->
+      </article>
+    </div><!-- /.container -->
+  </div><!-- /#wrapper -->
+    
   <!--
   The next line tells the browser where to download the JavaScript file you'll be
   writing. In resumeBuilder.js, you'll be writing code that builds the resume
@@ -119,7 +158,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       document.getElementById('topContacts').style.display = 'none';
     }
     if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementsByName('header').style.display = 'none';
+      document.getElementById('header').style.display = 'none';
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
       document.getElementById('workExperience').style.display = 'none';

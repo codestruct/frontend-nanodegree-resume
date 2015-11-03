@@ -1,28 +1,5 @@
-body,
-div,
-ul,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding:0;
-  margin:0;
-  font-family: "Roboto", sans-serif;
-}
 
-.clear-fix {
-  overflow: auto;
-}
 
-.education-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
-}
 
 h1 {
   font-size: 40px;
@@ -88,7 +65,7 @@ p {
 a {
   color: #1199c3;
   text-decoration: none;
-  margin-top: 10px;
+/*  margin-top: 10px; */
   display: block;
 }
 
@@ -127,10 +104,11 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
+/* TODO: Replace with image later 
 header {
   background-color: #484848;
 }
+*/
 
 .flex-box {
   display: -webkit-flex;
@@ -159,11 +137,11 @@ ul {
 img {
   padding: 10px;
 }
-
+/*
 span {
   padding: 5px;
 }
-
+*/
 #lets-connect {
   text-align: center;
 }
