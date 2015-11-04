@@ -9,10 +9,40 @@ These styles do not ship with Bootstrap.
 	overflow: auto;
 }
 
-
 #wrapper {
 	background-color: lighten(@gray-lighter, 5%);
-	margin: 20px;
+}
+
+header {
+  height: 750px;
+  padding-top: 150px;
+}
+
+// Container
+// --------------------------------------------------
+
+.container {
+  border: 20px solid #fff;
+}
+
+@media (min-width: 768px) {
+  .navbar-fixed-top {
+    width: 750px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-fixed-top {
+    width: 970px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar-fixed-top {
+    width: 1170px;
+    margin: 0 auto;
+  }
 }
 
 .education-entry,
@@ -21,12 +51,29 @@ These styles do not ship with Bootstrap.
   padding: 0 5%;
 }
 
+
+// Nav
+// --------------------------------------------------
+
+.navbar-brand {
+  height: 88px;  
+}
+
 .main-nav .main-nav-list {
 	float: left;
     min-width: 400px;
     list-style: none;
     padding-top: 34px;
     margin: 0;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
 }
 
 .navbar-toggle span.icon-bar {
@@ -38,8 +85,23 @@ These styles do not ship with Bootstrap.
   border-color: #fff;
 }
 
+.navbar-default .navbar-nav > li > a {
+  font-weight: 300;
+  padding: 0px 20px;
+  line-height: 80px;
+}
 
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #555555;
+  background-color: lighten(@gray-lighter, 5%);
+}
 
+.navbar-brand > img {
+  display: block;
+  width: 30%;
+}
 
 
 // Alternate navbars
@@ -48,5 +110,4 @@ These styles do not ship with Bootstrap.
 // Default navbar
 .navbar-default {
   background-color: lighten(@gray-lighter, 5%);
-  border-color: #fff;
 }
