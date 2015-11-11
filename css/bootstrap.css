@@ -6792,7 +6792,7 @@ These styles do not ship with Bootstrap.
 }
 header {
   height: 750px;
-  padding-top: 150px;
+  padding-top: 100px;
 }
 .container {
   border: 20px solid #fff;
@@ -6849,11 +6849,16 @@ header {
   padding: 0px 20px;
   line-height: 80px;
 }
-.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a {
+  color: #01A9DB;
+  text-decoration: underline;
+  background-color: transparent;
+}
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #555555;
-  background-color: #fbfbfb;
+  color: #888;
+  text-decoration: underline;
+  background-color: transparent;
 }
 .navbar-brand > img {
   display: block;

@@ -3,7 +3,7 @@
 //bio object -----------------------------------------------------//
 var bio = {
 	"name":"Helen Shiu",
-	"role":"Designer & Developer",
+	"role":"Design & Develop",
 	"contact" : {
 		"email" : "hello@helenshiu.com",
 		"phone" : "4166288054",
@@ -19,7 +19,7 @@ var bio = {
 };
 bio.display = function(){
  	var formattedName = HTMLheaderName.replace("%data%", bio.name);
-	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	var formattedRole = HTMLheaderRole.replace("%data%", '::' + ' ' +bio.role);
 	var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcome);
 	var formattedContact = HTMLcontactGeneric.replace("%contact%", "eMail").replace("%data%", bio.contact.email);
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contact.phone);
