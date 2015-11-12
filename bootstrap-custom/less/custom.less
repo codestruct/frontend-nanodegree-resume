@@ -4,6 +4,9 @@
 These styles do not ship with Bootstrap. 
 */
 
+body {
+  position: relative;
+}
 
 .clearfix() {
 	overflow: auto;
@@ -86,29 +89,69 @@ header {
 }
 
 .navbar-default .navbar-nav > li > a {
-  font-weight: 300;
-  padding: 0px 20px;
+  font-weight: 400;
+  padding: 0px 10px;
   line-height: 80px;
 }
 
-.navbar-default .navbar-nav > .active > a {
-  color: #01A9DB;
+.navbar-default .navbar-nav > li:last-child {
+  padding: 0px 15px 0 0;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover {
+  color: #ff3300;
   text-decoration: underline;
   background-color: transparent;
 }
 
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #888;
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #00cccc;
   text-decoration: underline;
   background-color: transparent;
 }
 
 .navbar-brand > img {
   display: block;
-  width: 30%;
+  width: 60px;
 }
 
+.navbar-toggle {
+  height: 60px;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 9px;
+}
+
+.navbar-toggle .icon-bar {
+  width: 30px;
+  height: 2px;
+}
+
+.navbar-toggle .icon-bar:nth-child(3), 
+.navbar-toggle .icon-bar:nth-child(5) {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  border-color: #00cccc;
+  background-color: transparent;
+}
+
+button.navbar-toggle.collapsed {
+  border-color: #ddd;
+  background-color: transparent;
+}
+
+button.navbar-toggle {
+  border-color: #00cccc;
+  background-color: transparent;
+}
 
 // Alternate navbars
 // --------------------------------------------------
@@ -116,4 +159,26 @@ header {
 // Default navbar
 .navbar-default {
   background-color: lighten(@gray-lighter, 5%);
+}
+
+// Sections
+// --------------------------------------------------
+
+#home, 
+#workExperience,
+#projects,
+#education,
+#lets-connect {
+  padding: 100px 0 20px 0;
+  clear:both;
+}
+
+.gray {
+  color: @gray-darker;
+  background-color: lighten(@gray-lighter, 5%);
+}
+
+.dark-gray {
+  color: @gray-darker;
+  background-color: @gray-lighter;
 }
