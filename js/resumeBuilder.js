@@ -194,6 +194,20 @@ work.display = function() {
 
         var jobItem = myJobs[i];
 
+        //3. format each job by adding a corresponding panel.
+        $('.work-entry').append(HTMLworkPanel);
+        var workID = "heading"+(i+1);
+        var linkID = "#collapse"+(i+1);
+        var ariaControls = "collapse"+(i+1);
+        var collapseID = "collapse"+(i+1);
+        var ariaLabel = workID;
+
+        $('.panel-heading:last').attr('id', workID);
+        $('.panel-title:last > a').attr('href', linkID);
+        $('.panel-title:last > a').attr('aria-controls', linkID);
+        $('.panel-collapse:last').attr('id', collapseID);
+        $('.panel-collapse:last').attr('aria-labelledby', ariaLabel);
+
     	for(var key in jobItem) {
             //3. formats each job's employer with HTMLworkEmployer and each job title with HTMLworkTitle and,
             var formattedEmployer = HTMLworkEmployer.replace("%data%", jobItem.employer);
@@ -204,10 +218,11 @@ work.display = function() {
 	      	//4. append a concatenation of employer and title each to the element with class work-entry:last.
        		var employerTitle = formattedEmployer + formattedTitle;
    		};
-	        $('.work-entry:last').append(employerTitle);
-	        $('.work-entry:last').append(formattedDates);
-	        $('.work-entry:last').append(formattedLocation);
-	        $('.work-entry:last').append(formattedDescription);
+
+	        $('.panel-title:last > a').append(employerTitle);
+	        $('.panel-title:last > a').append(formattedDates);
+	        $('.panel-title:last > a').append(formattedLocation);
+	        $('.work-description:last').append(formattedDescription);
     }
 
 };
