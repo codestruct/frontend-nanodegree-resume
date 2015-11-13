@@ -236,6 +236,7 @@ var allProjects = {
         {
             "title": "Bootstrap Responsive Website",
             "dates": "2013",
+            "type" : "web",
             "description": "Use Bootstrap to create demo website to demonstrate responsiveness across different devices.",
             "images": {
                 "src": "images/Bootstrap_Responsive_Web.jpg",
@@ -245,6 +246,7 @@ var allProjects = {
         {
             "title": "Single-Page Landing Page",
             "dates": "2015",
+            "type" : "web",
             "description": "A fast deployment of a landing page built with Bootstrap.",
             "images": {
                 "src": "images/xmas_780x780.jpg",
@@ -254,6 +256,7 @@ var allProjects = {
         {
             "title": "WordPress Website Design Development",
             "dates": "2015",
+            "type" : "web",
             "description": "Use WordPress to create a demo site.",
             "images": {
                 "src": "images/Website_Design_Development.jpg",
@@ -265,21 +268,40 @@ var allProjects = {
 };
 
 projects.display = function(){
+
+	$('#projects').append(HTMLprojectStart);
+
 	var myProjects = allProjects.projects;
+	//Add isotope filter
+	$('#projects section').append(HTMLprojectFilter);
+	//Add posts container
+	$('#projects section').append(HTMLprojectPosts);
+
 	//Write a for-in loop that iterates over all the projects in my projects objects.
 	for (var i=0; i<myProjects.length; i++) {
+
+		//Add single post div
+		$('#posts').append(HTMLprojectPost);
+
+		//Add id for each project post
+		var projectIDNo = i+1;
+
+		$('.item:last').attr('id', projectIDNo);
+
 		for(var key in myProjects){
 			var projectItem = myProjects[i];
 		 	var formattedProjectTitle = HTMLprojectTitle.replace('%data%', projectItem.title);
 		 	var formattedprojectDates = HTMLprojectDates.replace('%data%', projectItem.dates);
 		 	var formattedprojectDescription = HTMLprojectDescription.replace('%data%', projectItem.description);
 		 	var formattedprojectImage = HTMLprojectImage.replace('%data%', projectItem.images.src); 
+		 	var addProjectType = projectItem.type;
 		}
- 	$('#projects:last').append(HTMLprojectStart);
- 	$('.project-entry:last').append(formattedProjectTitle);
- 	$('.project-entry:last').append(formattedprojectDates);
- 	$('.project-entry:last').append(formattedprojectDescription);
- 	$('.project-entry:last').append(formattedprojectImage);
+
+	$('.item:last').addClass(addProjectType);
+ 	$('.item-wrap:last').append(formattedProjectTitle);
+ 	$('.item-wrap:last').append(formattedprojectDates);
+ 	$('.item-wrap:last').append(formattedprojectDescription);
+ 	$('.item-wrap:last').append(formattedprojectImage);
 	}
 }
 projects.display();

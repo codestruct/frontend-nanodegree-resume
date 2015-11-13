@@ -38,10 +38,13 @@ var HTMLworkLocation = '<span class="location-text"> - %data%</span>';
 var HTMLworkDescription = '<p>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
+var HTMLprojectFilter = '<div id="filters" class="button-group projectFilter”><button class="btn btn-primary" data-filter="*">show all</button><button class="btn btn-primary" data-filter=".web">WEB</button><button class="btn btn-primary" data-filter=".design">DESIGN</button></div>';
+var HTMLprojectPosts = '<div class="container-fluid no-gutter"><div id="posts" class="row"></div><!-- /.posts --></div><!-- /.container-fluid -->';
+var HTMLprojectPost = '<div class="item web col-sm-4"><div class="item-wrap"></div></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectImage = '<img class="img-responsive" src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
