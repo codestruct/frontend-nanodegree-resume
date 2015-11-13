@@ -53,12 +53,6 @@ body {
   }
 }
 
-.education-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
-}
-
 
 // Nav
 // --------------------------------------------------
@@ -199,7 +193,7 @@ h1#name {
 
 section h2 {
   font-family: @font-family-serif;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 #skills-h3 {
@@ -263,7 +257,68 @@ section h2 {
 }
 
 
-// images
+// Collapse
+// --------------------------------------------------
+
+#accordion p {
+  margin-bottom: 0;
+}
+
+.panel-default {
+  border: 0;
+}
+
+.panel-default {
+  border-top: 1px solid @gray-light;
+}
+
+.work-entry .panel {
+  border-radius: 0;
+}
+
+.panel.panel-default#work4 {
+  border-bottom: 1px solid @gray-light;
+}
+
+.panel-heading, .panel-body {
+  padding: 10px 20px;
+}
+
+.panel-heading.work {
+  padding-top: 5px;
+}
+
+.panel-title > a {
+  text-decoration: none;
+}
+
+
+h3 span:hover{
+  background: lighten(@secondary, 20%);
+}
+
+h3.workTitle {
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 10px;
+  color: #ff3300;
+  margin-bottom: 5px;
+}
+
+.workEmployer,
+.date-text,
+.location-text {
+  color: @gray-light;
+  font-size: 14px;
+}
+
+.date-text,
+.location-text {
+  font-style: italic;
+}
+
+
+// Images
 // --------------------------------------------------
 
 .biopic {

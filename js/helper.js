@@ -31,11 +31,11 @@ var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></
 
 var HTMLworkStart = '<div class="panel-group work-entry" id="accordion" role="tablist" aria-multiselectable="true"></div><!-- /.panel-group .work-entry -->';
 var HTMLworkPanel = '<div class="panel panel-default"><div class="panel-heading work" role="tab"><h4 class="panel-title work"><a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true"></a></h4></div><!-- /.panel-heading .work --></div><!-- /.panel --><div class="panel-collapse collapse" role="tabpanel"><div class="panel-body work-description"></div><!-- /.panel-body .work-description --></div><!-- /#collapse -->';
-var HTMLworkEmployer = '<span>%data%';
-var HTMLworkTitle = ' - %data%</span>';
-var HTMLworkDates = '<span class="date-text">%data%</span>';
-var HTMLworkLocation = '<span class="location-text">%data%</span>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkEmployer = '<span class="workEmployer">%data%</span>';
+var HTMLworkTitle = '<h3 class="workTitle text-uppercase"><span>%data%</span></h3>';
+var HTMLworkDates = '<span class="date-text"> - %data%</span>';
+var HTMLworkLocation = '<span class="location-text"> - %data%</span>';
+var HTMLworkDescription = '<p>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
