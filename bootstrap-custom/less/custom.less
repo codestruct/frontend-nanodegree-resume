@@ -13,13 +13,18 @@ body {
 }
 
 #wrapper {
-	background-color: lighten(@gray-lighter, 5%);
+	background-color: @gray-lighter;
 }
 
-header {
-  height: 750px;
-  padding-top: 100px;
+#header {
+  min-height: 840px;
+  background-image: url(../images/to_skyline.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  position: relative;
 }
+
 
 // Container
 // --------------------------------------------------
@@ -88,15 +93,17 @@ header {
   border-color: #fff;
 }
 
-.navbar-default .navbar-nav > li > a {
-  font-weight: 400;
-  padding: 0px 10px;
-  line-height: 80px;
+.navbar-default .navbar-nav > li {
+  padding: 0px 20px 0 0;
 }
 
-.navbar-default .navbar-nav > li:last-child {
-  padding: 0px 15px 0 0;
+.navbar-default .navbar-nav > li > a {
+  font-weight: 400;
+  line-height: 50px;
+  font-size: @font-size-small;
+  padding: 25px 0 5px 0;
 }
+
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover {
   color: #ff3300;
@@ -153,6 +160,7 @@ button.navbar-toggle {
   background-color: transparent;
 }
 
+
 // Alternate navbars
 // --------------------------------------------------
 
@@ -160,6 +168,51 @@ button.navbar-toggle {
 .navbar-default {
   background-color: lighten(@gray-lighter, 5%);
 }
+
+
+// Typography
+// --------------------------------------------------
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: #1199c3;
+  text-decoration: none;
+  display: block;
+}
+
+h1#name {
+  font-family: @font-family-serif;
+  margin: 0 0 0 -15px;
+  line-height: 55px;
+  font-size: 28px;
+}
+
+.welcome-message {
+  font-family: @font-family-serif;
+  font-size: @font-size-large;
+  color: @brand-primary;
+  line-height: 28px;
+}
+
+section h2 {
+  font-family: @font-family-serif;
+  padding: 0 30px;
+}
+
+#skills-h3 {
+  color: #f5ae23;
+  display: none;
+  font-variant: normal;
+}
+
+.white-text {
+  font-weight: 400;
+  color: #fff;
+}
+
 
 // Sections
 // --------------------------------------------------
@@ -181,4 +234,89 @@ button.navbar-toggle {
 .dark-gray {
   color: @gray-darker;
   background-color: @gray-lighter;
+}
+
+.welcome {
+  padding: 20px 75px 0 75px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.welcome .welcome-message {
+  color: #333;
+  font-size: 32px;
+  line-height: 1.75em;
+}
+
+.bio-info {
+  margin: 0 auto;
+  width: 30%;
+}
+
+.flex-item {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+
+// images
+// --------------------------------------------------
+
+.biopic {
+  padding: 10px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+
+// Media queries to handle various device widths
+// --------------------------------------------------
+
+@media only screen and (max-width: 1024px) {
+  #lets-connect {
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .biopic {
+    width: 175px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #lets-connect {
+    margin-top: 10%;
+  }
+  .biopic {
+    width: 150px;
+  }
+  .welcome-message {
+    display: none;
+  }
+}
+
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+@media only screen and (min-width: 750px) {
+  #skills-h3,
+  .biopic {
+    display: block;
+  }
 }

@@ -13,28 +13,28 @@ var bio = {
 		"city" : "Toronto, Canada",
 		"location" : "1048 Broadview ave., Toronto, Canada"
 		},
-	"welcome" : "Hello, my name is Helen. I am an UI Designer and Developer who is all about creating good online user experience.",
-	"skills" : ["Visual Design", "HTML", "CSS", "Responsive Design", "BootStrap", "Wireframe"],
-	"bioPict" : "images/Half-100X100.jpg"
+	"welcome" : "Hello! I am a multi-skilled Web Designer/Front End Developer who thrives in challenging, fast-paced, and team-oriented environment.",
+	"skills" : ["HTML 5", "CSS 3", "JavaScript", "Build Responsive Website", "BootStrap", "Create Wireframe","WordPress CMS"],
+	"bioPict" : "images/New_Profile_2015_300x300.jpg"
 };
 bio.display = function(){
  	var formattedName = HTMLheaderName.replace("%data%", bio.name);
-	var formattedRole = HTMLheaderRole.replace("%data%", '::' + ' ' +bio.role);
+	var formattedRole = HTMLheaderRole.replace("%data%", ' ::' + ' ' +bio.role);
 	var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcome);
 	var formattedContact = HTMLcontactGeneric.replace("%contact%", "eMail").replace("%data%", bio.contact.email);
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contact.phone);
 	var formattedLocation = HTMLlocation.replace("%data%", bio.contact.city);
 	var formattedSkills = HTMLskills.replace("%data%", bio.skills);
 	var formattedPict = HTMLbioPic.replace("%data%", bio.bioPict);
-	$("header").prepend(formattedName);
+	$(".navbar-brand").prepend(formattedName);
 	$('h1#name').append(formattedRole);
-	$("header").append(formattedPict);
-	$("header").append(formattedWelcome);
-	$("header").append(HTMLskillsStart);
+	$(".welcome").append(formattedWelcome);
+	$(".welcome").append(HTMLskillsStart);
 	$("ul#skills").append(formattedSkills);
-	$("ul#topContacts").append(formattedContact);
-	$("ul#topContacts").append(formattedMobile);
-	$("ul#topContacts").append(formattedLocation);
+	$(".bio-info").append(formattedPict);
+	$("img.biopic").after($("ul#topContacts").append(formattedContact));
+	$("img.biopic").after($("ul#topContacts").append(formattedMobile));
+
 }
 bio.display();
 

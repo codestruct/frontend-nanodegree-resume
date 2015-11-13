@@ -1,5 +1,5 @@
 /* Helen @Quilt9 was here NOV3 */
-@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700,300&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Pacifico|Roboto:400,300|Roboto+Condensed);
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -1073,7 +1073,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -6009,7 +6009,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6127,7 +6127,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6791,11 +6791,15 @@ body {
   position: relative;
 }
 #wrapper {
-  background-color: #fbfbfb;
+  background-color: #eeeeee;
 }
-header {
-  height: 750px;
-  padding-top: 100px;
+#header {
+  min-height: 840px;
+  background-image: url(../images/to_skyline.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  position: relative;
 }
 .container {
   border: 20px solid #fff;
@@ -6847,13 +6851,14 @@ header {
   border-width: 20px 20px 1px 20px;
   border-color: #fff;
 }
+.navbar-default .navbar-nav > li {
+  padding: 0px 20px 0 0;
+}
 .navbar-default .navbar-nav > li > a {
   font-weight: 400;
-  padding: 0px 10px;
-  line-height: 80px;
-}
-.navbar-default .navbar-nav > li:last-child {
-  padding: 0px 15px 0 0;
+  line-height: 50px;
+  font-size: 12px;
+  padding: 25px 0 5px 0;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover {
@@ -6904,6 +6909,39 @@ button.navbar-toggle {
 .navbar-default {
   background-color: #fbfbfb;
 }
+ul {
+  list-style-type: none;
+}
+a {
+  color: #1199c3;
+  text-decoration: none;
+  display: block;
+}
+h1#name {
+  font-family: Pacifico, "Times New Roman", Times, cursive;
+  margin: 0 0 0 -15px;
+  line-height: 55px;
+  font-size: 28px;
+}
+.welcome-message {
+  font-family: Pacifico, "Times New Roman", Times, cursive;
+  font-size: 18px;
+  color: #ff3300;
+  line-height: 28px;
+}
+section h2 {
+  font-family: Pacifico, "Times New Roman", Times, cursive;
+  padding: 0 30px;
+}
+#skills-h3 {
+  color: #f5ae23;
+  display: none;
+  font-variant: normal;
+}
+.white-text {
+  font-weight: 400;
+  color: #fff;
+}
 #home,
 #workExperience,
 #projects,
@@ -6919,4 +6957,70 @@ button.navbar-toggle {
 .dark-gray {
   color: #222222;
   background-color: #eeeeee;
+}
+.welcome {
+  padding: 20px 75px 0 75px;
+  margin: 0 auto;
+  text-align: center;
+}
+.welcome .welcome-message {
+  color: #333;
+  font-size: 32px;
+  line-height: 1.75em;
+}
+.bio-info {
+  margin: 0 auto;
+  width: 30%;
+}
+.flex-item {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+.biopic {
+  padding: 10px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+@media only screen and (max-width: 1024px) {
+  #lets-connect {
+    margin-top: 5%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .biopic {
+    width: 175px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #lets-connect {
+    margin-top: 10%;
+  }
+  .biopic {
+    width: 150px;
+  }
+  .welcome-message {
+    display: none;
+  }
+}
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+@media only screen and (min-width: 750px) {
+  #skills-h3,
+  .biopic {
+    display: block;
+  }
 }

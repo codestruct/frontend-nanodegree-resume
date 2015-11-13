@@ -65,12 +65,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       resume below. You can pretty easily figure out what each section will
       display by looking at the id or at what's written between the <h2> tags.
       -->
-      <div id="header" class="center-content clear-fix row gray">
+      <div id="header" class="clear-fix row">
         <header id="home">
           <nav id="top-nav" class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
               <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
+              <div class="navbar-header col-sm-6 col-md-6">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                   <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
@@ -79,14 +79,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" rel="home" href="#" title="Helen Shiu - Design & Develop">
-                  <img src="images/hs_logo.svg" alt="Helen Shiu Logo"></a>
+                <a class="navbar-brand" rel="home" href="#home" title="Helen Shiu - Design & Develop"></a>
               </div>
 
               <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1 col-sm-6 col-md-6">
                 <ul class="navbar navbar-nav text-uppercase navbar-right">
-<!--                  <li class="active"><a href="#">About Me<span class="sr-only">(current)</span></a></li> -->
                   <li><a href="#workExperience">Work</a></li>
                   <li><a href="#projects">Projects</a></li>
                   <li><a href="#education">Education</a></li>
@@ -95,7 +93,11 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
               </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
           </nav>
-          <ul id="topContacts" class="flex-box"></ul>
+          <div class="welcome">
+          </div><!-- /.welcome -->
+          <div class="bio-info">
+            <ul id="topContacts"></ul>
+          </div><!-- /.bio-info -->
         </header>        
       </div><!-- /#header -->
       <div style="clear: both;"></div>

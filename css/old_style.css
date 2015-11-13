@@ -16,12 +16,6 @@ h2 {
   padding: 10px;
 }
 
-h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
-  line-height: 22px;
-}
 
 h4 {
   font-weight: bold;
@@ -69,18 +63,6 @@ a {
   display: block;
 }
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
-}
-
-#skills-h3 {
-  color: #f5ae23;
-  display: none;
-}
-
 .orange {
   background-color: #f5ae23;
 }
@@ -95,13 +77,6 @@ a {
 }
 
 
-
-/* TODO: Replace with image later 
-header {
-  background-color: #484848;
-}
-*/
-
 .flex-box {
   display: -webkit-flex;
   display: flex;
@@ -109,10 +84,6 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
-}
-
-.center-content {
-  padding: 2.5% 5%;
 }
 
 ul {
@@ -138,47 +109,4 @@ span {
   text-align: center;
 }
 
-/* Media queries to handle various device widths */
 
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
-}
-
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
-}
-
-#map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
-}
-
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-}
-
-@media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
-  }
-}
