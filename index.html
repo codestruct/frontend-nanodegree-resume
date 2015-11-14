@@ -103,30 +103,20 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <div style="clear: both;"></div>
       <article>
         <div name="work" id="workExperience" class="row dark-gray">
-          <section>
             <h2>Work Experience</h2>
-          </section>
         </div><!-- /#workExperience -->
         <div name="projects" id="projects" class="row gray">
-          <section>
             <h2>Projects</h2>
-          </section>
         </div><!-- /#projects -->
         <div name="education" id="education" class="row dark-gray">
-          <section>
             <h2>Education</h2>
-          </section>
         </div><!-- /#education -->
         <div id="mapDiv" class="row">
-          <section>
             <h2>Where I've Lived and Worked</h2>
-          </section>
         </div><!-- /#mapDiv -->
         <div name="contact" id="lets-connect" class="row gray">
-          <section>
             <h2 class="orange center-text">Let's Connect</h2>
             <ul id="footerContacts" class="flex-box"></ul>
-          </section>
         </div><!-- /#lets-connect -->
       </article>
     </div><!-- /.container -->
@@ -191,6 +181,36 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <!-- isotope -->
   <script src="js/isotope.pkgd.min.js"></script>
+
+  <script type="text/javascript">
+    $(window).load(function(){
+      var $container = $('.projectContainer');
+      $container.isotope({
+        filter: '*',
+        animationOptions: {
+          duration: 750,
+          easing: 'linear',
+          queue: false
+        }
+      });
+ 
+      $('.projectFilter a').click(function(){
+        $('.projectFilter .current').removeClass('current');
+        $(this).addClass('current');
+ 
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+          filter: selector,
+          animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+          }
+         });
+         return false;
+      }); 
+    });
+  </script>
 
   <!-- one-page scroll -->
   <script src="js/jquery.nav.js"></script>

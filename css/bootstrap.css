@@ -6910,7 +6910,6 @@ ul {
 a {
   color: #1199c3;
   text-decoration: none;
-  display: block;
 }
 h1#name {
   font-family: Pacifico, "Times New Roman", Times, cursive;
@@ -6924,7 +6923,7 @@ h1#name {
   color: #ff3300;
   line-height: 28px;
 }
-section h2 {
+article h2 {
   font-family: Pacifico, "Times New Roman", Times, cursive;
   padding: 0 20px;
 }
@@ -7026,6 +7025,47 @@ h3.workTitle {
   display: block;
   margin: 0 auto;
   width: 50%;
+}
+.projectFilter a {
+  margin-right: 10px;
+  color: #666;
+  text-decoration: none;
+}
+.projectFilter a.current {
+  font-weight: bold;
+}
+img {
+  margin: 5px;
+}
+.isotope-item {
+  z-index: 2;
+}
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: top, left, opacity;
+  transition-property: transform, opacity;
 }
 @media only screen and (max-width: 1024px) {
   #lets-connect {

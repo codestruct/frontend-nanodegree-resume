@@ -38,10 +38,10 @@ var HTMLworkLocation = '<span class="location-text"> - %data%</span>';
 var HTMLworkDescription = '<p>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectFilter = '<div id="filters" class="button-group projectFilter”><button class="btn btn-primary" data-filter="*">show all</button><button class="btn btn-primary" data-filter=".web">WEB</button><button class="btn btn-primary" data-filter=".design">DESIGN</button></div>';
-var HTMLprojectPosts = '<div class="container-fluid no-gutter"><div id="posts" class="row"></div><!-- /.posts --></div><!-- /.container-fluid -->';
-var HTMLprojectPost = '<div class="item web col-sm-4"><div class="item-wrap"></div></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectFilter = '<div class="projectFilter"><a href="#" data-filter="*" class="current">All Categories</a><a href="#" data-filter=“.design”>Design</a><a href="#" data-filter=“.web”>Web</a></div>';
+var HTMLprojectPosts = '<div class="projectContainer"></div><!—- /.projectContainer -->';
+var HTMLprojectPost = '<div class="item col-sm-6 col-md-4 col-lg-4"></div>';
+var HTMLprojectTitle = '<h4>%data%</h4>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img class="img-responsive" src="%data%">';

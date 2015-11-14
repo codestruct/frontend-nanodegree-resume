@@ -239,8 +239,9 @@ var allProjects = {
             "type" : "web",
             "description": "Use Bootstrap to create demo website to demonstrate responsiveness across different devices.",
             "images": {
-                "src": "images/Bootstrap_Responsive_Web.jpg",
-                "name": "Restaurant Website"
+                "src": "images/Bootstrap_Responsive_Web_T.jpg",
+                "name": "Restaurant Website",
+                "alt" : "Use Bootstrap to create demo website to demonstrate responsiveness across different devices."
             }
         },
         {
@@ -249,8 +250,9 @@ var allProjects = {
             "type" : "web",
             "description": "A fast deployment of a landing page built with Bootstrap.",
             "images": {
-                "src": "images/xmas_780x780.jpg",
-                "name": "Landing Page"
+                "src": "images/hofland_xmas.jpg",
+                "name": "Landing Page",
+                "alt" : "A fast deployment of a landing page built with Bootstrap."
             }
         },
         {
@@ -260,7 +262,8 @@ var allProjects = {
             "description": "Use WordPress to create a demo site.",
             "images": {
                 "src": "images/Website_Design_Development.jpg",
-                "name": "WordPress Website"
+                "name": "WordPress Website",
+                "alt" : "Design and develop website on WordPress."
             }
             
         }
@@ -273,15 +276,15 @@ projects.display = function(){
 
 	var myProjects = allProjects.projects;
 	//Add isotope filter
-	$('#projects section').append(HTMLprojectFilter);
+	$('.project-entry').append(HTMLprojectFilter);
 	//Add posts container
-	$('#projects section').append(HTMLprojectPosts);
+	$('.project-entry').append(HTMLprojectPosts);
 
 	//Write a for-in loop that iterates over all the projects in my projects objects.
 	for (var i=0; i<myProjects.length; i++) {
 
 		//Add single post div
-		$('#posts').append(HTMLprojectPost);
+		$('.projectContainer').append(HTMLprojectPost);
 
 		//Add id for each project post
 		var projectIDNo = i+1;
@@ -295,13 +298,13 @@ projects.display = function(){
 		 	var formattedprojectDescription = HTMLprojectDescription.replace('%data%', projectItem.description);
 		 	var formattedprojectImage = HTMLprojectImage.replace('%data%', projectItem.images.src); 
 		 	var addProjectType = projectItem.type;
+		 	var addImageAlt = projectItem.images.alt;
 		}
 
 	$('.item:last').addClass(addProjectType);
- 	$('.item-wrap:last').append(formattedProjectTitle);
- 	$('.item-wrap:last').append(formattedprojectDates);
- 	$('.item-wrap:last').append(formattedprojectDescription);
- 	$('.item-wrap:last').append(formattedprojectImage);
+	$('.item:last').attr('alt', addImageAlt);
+ 	$('.item:last').append(formattedProjectTitle);
+ 	$('.item:last').append(formattedprojectImage);
 	}
 }
 projects.display();
