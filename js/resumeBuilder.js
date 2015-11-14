@@ -312,7 +312,9 @@ projects.display = function(){
 
 		//Add id for each project post
 		var projectIDNo = i+1;
+		var modalNo = '.bs-example-modal-lg-' + projectIDNo;
 
+		$('.item:last > a').attr('data-target', modalNo);
 		$('.item:last').attr('id', projectIDNo);
 
 		for(var key in myProjects){
@@ -327,8 +329,8 @@ projects.display = function(){
 
 	$('.item:last').addClass(addProjectType);
 	$('.item:last').attr('alt', addImageAlt);
- 	$('.item:last').append(formattedProjectTitle);
- 	$('.item:last').append(formattedprojectImage);
+ 	$('.item:last > a').append(formattedProjectTitle);
+ 	$('.item:last > a').append(formattedprojectImage);
 	}
 }
 projects.display();
