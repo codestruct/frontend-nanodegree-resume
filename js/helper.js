@@ -38,7 +38,7 @@ var HTMLworkLocation = '<span class="location-text"> - %data%</span>';
 var HTMLworkDescription = '<p>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectFilter = '<div class="projectFilter"><a href="#" data-filter="*" class="current">All Categories</a><a href="#" data-filter=“.design”>Design</a><a href="#" data-filter=“.web”>Web</a></div>';
+var HTMLprojectFilter = '<div class="projectFilter"><a href="#" data-filter="*" class="current">All Categories</a><a href="#" data-filter=".design">Design</a><a href="#" data-filter=".web">Web</a></div>';
 var HTMLprojectPosts = '<div class="projectContainer"></div><!—- /.projectContainer -->';
 var HTMLprojectPost = '<div class="item col-sm-6 col-md-4 col-lg-4"></div>';
 var HTMLprojectTitle = '<h4>%data%</h4>';

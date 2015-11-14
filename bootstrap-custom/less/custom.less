@@ -350,10 +350,12 @@ img {
 .isotope-item {
     z-index: 2;
 }
+
 .isotope-hidden.isotope-item {
     pointer-events: none;
     z-index: 1;
 }
+
 .isotope,
 .isotope .isotope-item {
   /* change duration value to whatever you like */
@@ -364,6 +366,7 @@ img {
        -o-transition-duration: 0.8s;
           transition-duration: 0.8s;
 }
+
 .isotope {
   -webkit-transition-property: height, width;
      -moz-transition-property: height, width;
@@ -371,6 +374,7 @@ img {
        -o-transition-property: height, width;
           transition-property: height, width;
 }
+
 .isotope .isotope-item {
   -webkit-transition-property: -webkit-transform, opacity;
      -moz-transition-property:    -moz-transform, opacity;
@@ -379,6 +383,23 @@ img {
           transition-property:         transform, opacity;
 }
 
+/* Helen's css for isotope */
+
+.projectFilter {
+  margin: 10px 0 10px 20px;
+}
+
+.item {
+  padding: 5px 0 0 0;
+  max-height: 200px;
+}
+
+.item h4 {
+  font-weight: 300;
+  font-size: 16px;
+  color: @gray-light;
+  text-align: center;
+}
 
 
 // Media queries to handle various device widths

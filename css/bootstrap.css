@@ -7067,6 +7067,20 @@ img {
   -o-transition-property: top, left, opacity;
   transition-property: transform, opacity;
 }
+/* Helen's css for isotope */
+.projectFilter {
+  margin: 10px 0 10px 20px;
+}
+.item {
+  padding: 5px 0 0 0;
+  max-height: 200px;
+}
+.item h4 {
+  font-weight: 300;
+  font-size: 16px;
+  color: #777777;
+  text-align: center;
+}
 @media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;

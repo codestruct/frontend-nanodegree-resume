@@ -261,9 +261,33 @@ var allProjects = {
             "type" : "web",
             "description": "Use WordPress to create a demo site.",
             "images": {
-                "src": "images/Website_Design_Development.jpg",
+                "src": "images/WordPress_Design_Development_T.jpg",
                 "name": "WordPress Website",
                 "alt" : "Design and develop website on WordPress."
+            }
+            
+        },
+        {
+            "title": "eCampaign Design for MailChimp",
+            "dates": "2015",
+            "type" : "design",
+            "description": "Design the X'mas eCampaign for MailChimp email distribution.",
+            "images": {
+                "src": "images/Email_Campaign_Design_2_T.jpg",
+                "name": "eCampaign Design for MailChimp",
+                "alt" : "eCampaign Design for MailChimp"
+            }
+            
+        },
+        {
+            "title": "eCampaign Design for MailChimp",
+            "dates": "2015",
+            "type" : "design",
+            "description": "Design the X'mas eCampaign for MailChimp email distribution.",
+            "images": {
+                "src": "images/Email_Campaign_Design_2_T.jpg",
+                "name": "eCampaign Design for MailChimp",
+                "alt" : "eCampaign Design for MailChimp"
             }
             
         }
