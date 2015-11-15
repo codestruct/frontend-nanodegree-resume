@@ -312,7 +312,8 @@ projects.display = function(){
 
 		//Add id for each project post
 		var projectIDNo = i+1;
-		var modalNo = '.bs-example-modal-lg-' + projectIDNo;
+		var modalNo = '#bs-example-modal-lg-' + projectIDNo;
+		var modalClass = 'bs-example-modal-lg-' + projectIDNo;
 
 		$('.item:last > a').attr('data-target', modalNo);
 		$('.item:last').attr('id', projectIDNo);
@@ -322,15 +323,20 @@ projects.display = function(){
 		 	var formattedProjectTitle = HTMLprojectTitle.replace('%data%', projectItem.title);
 		 	var formattedprojectDates = HTMLprojectDates.replace('%data%', projectItem.dates);
 		 	var formattedprojectDescription = HTMLprojectDescription.replace('%data%', projectItem.description);
-		 	var formattedprojectImage = HTMLprojectImage.replace('%data%', projectItem.images.src); 
+		 	var formattedprojectImage = HTMLprojectImage.replace('%data%', projectItem.images.src);
 		 	var addProjectType = projectItem.type;
 		 	var addImageAlt = projectItem.images.alt;
 		}
 
 	$('.item:last').addClass(addProjectType);
-	$('.item:last').attr('alt', addImageAlt);
  	$('.item:last > a').append(formattedProjectTitle);
  	$('.item:last > a').append(formattedprojectImage);
+	$('.item:last > a > img').attr('alt', addImageAlt);
+	/*
+ 	$('.item:last > a').append(HTMLprojectModal);
+ 	$('.carousel:last').attr('id', 'carousel-example-generic');
+ 	$('.modal:last').attr('id', modalClass);
+ 	*/
 	}
 }
 projects.display();
