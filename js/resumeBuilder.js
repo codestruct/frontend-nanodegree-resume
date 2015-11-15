@@ -242,7 +242,8 @@ var allProjects = {
                 "src": "images/Bootstrap_Responsive_Web_T.jpg",
                 "name": "Restaurant Website",
                 "alt" : "Use Bootstrap to create demo website to demonstrate responsiveness across different devices."
-            }
+            },
+            "modalPict" : "images/Bootstrap_Responsive_Web.jpg"
         },
         {
             "title": "Single-Page Landing Page",
@@ -253,7 +254,7 @@ var allProjects = {
                 "src": "images/hofland_xmas.jpg",
                 "name": "Landing Page",
                 "alt" : "A fast deployment of a landing page built with Bootstrap."
-            }
+            },
         },
         {
             "title": "WordPress Website Design Development",
@@ -312,9 +313,9 @@ projects.display = function(){
 
 		//Add id for each project post
 		var projectIDNo = i+1;
-		var modalNo = '#bs-example-modal-lg-' + projectIDNo;
-		var modalAria = 'aria-labelledby="myLargeModalLabel-' + projectIDNo;
-		var modalClass = 'bs-example-modal-lg-' + projectIDNo;
+		var modalNo = '#myModal-' + projectIDNo;
+		var modalIdNo = 'myModal-' + projectIDNo;
+		var modalAria = 'myLargeModalLabel-' + projectIDNo;
 
 		$('.item:last > a').attr('data-target', modalNo);
 		$('.item:last').attr('id', projectIDNo);
@@ -325,6 +326,7 @@ projects.display = function(){
 		 	var formattedprojectDates = HTMLprojectDates.replace('%data%', projectItem.dates);
 		 	var formattedprojectDescription = HTMLprojectDescription.replace('%data%', projectItem.description);
 		 	var formattedprojectImage = HTMLprojectImage.replace('%data%', projectItem.images.src);
+		 	var formattedprojectModalPic = HTMLprojectModalPic.replace('%data%', projectItem.modalPict);
 		 	var addProjectType = projectItem.type;
 		 	var addImageAlt = projectItem.images.alt;
 		}
@@ -333,10 +335,12 @@ projects.display = function(){
  	$('.item:last > a').append(formattedProjectTitle);
  	$('.item:last > a').append(formattedprojectImage);
 	$('.item:last > a > img').attr('alt', addImageAlt);
- 	$('.item:last > a').append(HTMLprojectModal);
- 	$('.carousel:last').attr('id', 'carousel-example-generic');
- 	$('.modal:last').attr('id', modalClass);
+ 	$('.item:last').append(HTMLprojectModal);
+ 	$('.modal:last').attr('id', modalIdNo);
  	$('.modal:last').attr('aria-labelledby', modalAria);
+ 	$('h4:last').html(projectItem.title);
+ 	$('p:last').html(projectItem.description);
+ 	$('.modal-body:last').append(formattedprojectModalPic);
 	}
 }
 projects.display();
