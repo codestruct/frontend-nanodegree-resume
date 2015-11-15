@@ -57,12 +57,12 @@ body {
 // Nav
 // --------------------------------------------------
 
-
 h1#name {
   font-family: @font-family-serif;
   margin: 0 0 0 0px;
   line-height: 40px;
-  font-size: 28px;
+  font-size: 21px;
+  text-align: center;
 }
 
 .navbar-brand {
@@ -87,9 +87,18 @@ h1#name {
   margin: 0;
 }
 
+.navbar {
+  min-height: 0px;
+}
+
 .navbar .navbar-nav {
-    display: inline-block;
-    float: none;
+  display: inline-block;
+  float: none;
+}
+
+.navbar-brand {
+  display: block;
+  float: none;
 }
 
 .navbar .navbar-collapse {
@@ -109,10 +118,13 @@ h1#name {
   padding: 0px 20px 0 0;
 }
 
+.navbar-default .navbar-nav > li:last-child {
+  padding: 0px 0 0 0;
+}
+
 .navbar-default .navbar-nav > li > a {
-  font-weight: 400;
-  line-height: 45px;
-  font-size: @font-size-small;
+  font-weight: 300;
+  font-size: 10px;
 }
 
 .navbar-default .navbar-nav > .active > a, 
@@ -136,7 +148,7 @@ h1#name {
 
 .navbar-toggle {
   height: 30px;
-  margin: 18px 15px 5px;
+  margin: 15px 15px;
 }
 
 .navbar-toggle .icon-bar {
@@ -156,14 +168,31 @@ h1#name {
   background-color: transparent;
 }
 
+.navbar .navbar-nav {
+  display: inline-flex;
+}
+
+ul.navbar.navbar-nav {
+  padding: 0;
+}
+
 button.navbar-toggle.collapsed {
   border-color: transparent;
   background-color: transparent;
+  margin: 15px 15px 15px 0;
 }
 
 button.navbar-toggle {
-  border-color: #00cccc;
-  background-color: transparent;
+  margin: 15px 15px 15px 0;
+}
+
+#bs-example-navbar-collapse-1 {
+  text-align: center;
+  border-top: 1px solid @gray-light;
+}
+
+ul.navbar.navbar-nav {
+  vertical-align: top;
 }
 
 
@@ -178,6 +207,10 @@ button.navbar-toggle {
 
 // Typography
 // --------------------------------------------------
+
+h1 {
+  letter-spacing: 0.05em;
+}
 
 ul {
   list-style-type: none;
@@ -197,8 +230,9 @@ a {
 
 article h2 {
   font-family: @font-family-serif;
-  padding: 0 20px;
-  font-size: 21px;
+  padding: 0 15px;
+  font-size: 16px;
+  letter-spacing: 0.05em;
 }
 
 #skills-h3 {
@@ -222,7 +256,7 @@ article h2 {
 #projects,
 #education,
 #lets-connect {
-  padding: 80px 0 20px 0;
+  padding: 110px 0 20px 0;
   clear:both;
 }
 
@@ -237,15 +271,16 @@ article h2 {
 }
 
 .welcome {
-  padding: 20px 75px 0 75px;
+  padding: 10px 35px 0 35px;
   margin: 0 auto;
   text-align: center;
 }
 
 .welcome .welcome-message {
-  color: #333;
-  font-size: 32px;
-  line-height: 1.75em;
+  color: @gray-light;
+  font-size: 16px;
+  line-height: 1.35em;
+  letter-spacing: 0.05em;
 }
 
 .bio-info {
@@ -287,7 +322,7 @@ article h2 {
 }
 
 .panel-heading, .panel-body {
-  padding: 10px 20px;
+  padding: 10px 15px;
 }
 
 .panel-heading.work {
@@ -393,7 +428,7 @@ img {
 /* Helen's css for isotope */
 
 .projectFilter {
-  margin: 10px 0 10px 20px;
+  margin: 10px 0 10px 15px;
 }
 
 .item {
@@ -412,12 +447,6 @@ img {
 // Media queries to handle various device widths
 // --------------------------------------------------
 
-@media only screen and (min-width: 768px) {
-  .navbar-right {
-    margin-top: 10px;
-  }
-}
-
 @media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;
@@ -430,16 +459,78 @@ img {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 768px) {
+
+  h1#name {
+  font-family: @font-family-serif;
+  margin: 0 0 0 0px;
+  line-height: 40px;
+  font-size: 28px;
+}
+
+  .navbar-right {
+    margin-top: 10px;
+  }
+
+  .navbar {
+    min-height: 50px;
+  }
+
+  .navbar-default .navbar-nav > li:last-child {
+    padding: 0px 20px 0 0;
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    font-weight: 400;
+    font-size: @font-size-small;
+    line-height: 45px;
+  }
+
+  .welcome {
+    padding: 20px 75px 0 75px;
+  }
+
+  .welcome .welcome-message {
+    font-size: 28px;
+    line-height: 1.5em;
+  }
+
+  #home, 
+  #workExperience,
+  #projects,
+  #education,
+  #lets-connect {
+    padding: 80px 0 20px 0;
+    clear:both;
+  }
+
+  article h2 {
+  font-size: 24px;
+  }
+
   #lets-connect {
     margin-top: 10%;
   }
   .biopic {
     width: 150px;
   }
-  .welcome-message {
-    display: none;
+
+  #bs-example-navbar-collapse-1 {
+    border-top: none;
   }
+}
+
+@media only screen and (min-width: 480px) {
+  /*
+  .navbar-header {
+    float: left;
+  }
+  */
+}
+
+@media only screen and (max-width: 480px){
+
+
 }
 
 #map {

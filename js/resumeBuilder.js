@@ -313,6 +313,7 @@ projects.display = function(){
 		//Add id for each project post
 		var projectIDNo = i+1;
 		var modalNo = '#bs-example-modal-lg-' + projectIDNo;
+		var modalAria = 'aria-labelledby="myLargeModalLabel-' + projectIDNo;
 		var modalClass = 'bs-example-modal-lg-' + projectIDNo;
 
 		$('.item:last > a').attr('data-target', modalNo);
@@ -332,11 +333,10 @@ projects.display = function(){
  	$('.item:last > a').append(formattedProjectTitle);
  	$('.item:last > a').append(formattedprojectImage);
 	$('.item:last > a > img').attr('alt', addImageAlt);
-	/*
  	$('.item:last > a').append(HTMLprojectModal);
  	$('.carousel:last').attr('id', 'carousel-example-generic');
  	$('.modal:last').attr('id', modalClass);
- 	*/
+ 	$('.modal:last').attr('aria-labelledby', modalAria);
 	}
 }
 projects.display();
