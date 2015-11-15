@@ -60,13 +60,14 @@ body {
 
 h1#name {
   font-family: @font-family-serif;
-  margin: 0 0 0 -15px;
+  margin: 0 0 0 0px;
   line-height: 40px;
   font-size: 28px;
 }
 
 .navbar-brand {
-  height: 65px;  
+  height: 50px;  
+  padding: 10px 15px;
 }
 
 .navbar-default .navbar-brand {
@@ -80,10 +81,10 @@ h1#name {
 
 .main-nav .main-nav-list {
 	float: left;
-    min-width: 400px;
-    list-style: none;
-    padding-top: 34px;
-    margin: 0;
+  min-width: 400px;
+  list-style: none;
+  padding-top: 34px;
+  margin: 0;
 }
 
 .navbar .navbar-nav {
@@ -110,7 +111,7 @@ h1#name {
 
 .navbar-default .navbar-nav > li > a {
   font-weight: 400;
-  line-height: 65px;
+  line-height: 45px;
   font-size: @font-size-small;
 }
 
@@ -221,7 +222,7 @@ article h2 {
 #projects,
 #education,
 #lets-connect {
-  padding: 90px 0 20px 0;
+  padding: 80px 0 20px 0;
   clear:both;
 }
 
@@ -410,6 +411,12 @@ img {
 
 // Media queries to handle various device widths
 // --------------------------------------------------
+
+@media only screen and (min-width: 768px) {
+  .navbar-right {
+    margin-top: 10px;
+  }
+}
 
 @media only screen and (max-width: 1024px) {
   #lets-connect {
