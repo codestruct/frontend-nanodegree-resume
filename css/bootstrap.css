@@ -6973,7 +6973,7 @@ article h2 {
 #projects,
 #education,
 #lets-connect {
-  padding: 110px 0 20px 0;
+  padding: 110px 0 0px 0;
   clear: both;
 }
 .gray {
@@ -7106,13 +7106,19 @@ img {
 }
 .item {
   padding: 5px 0 0 0;
-  max-height: 200px;
+  max-height: 280px;
 }
 .item h4 {
   font-weight: 300;
   font-size: 16px;
   color: #777777;
   text-align: center;
+}
+.item.web img {
+  margin: 15px 0 0 0;
+}
+.item.design img {
+  margin: 15px 0 0 0;
 }
 @media only screen and (max-width: 1024px) {
   #lets-connect {
@@ -7157,7 +7163,7 @@ img {
   #projects,
   #education,
   #lets-connect {
-    padding: 80px 0 20px 0;
+    padding: 80px 0 0px 0;
     clear: both;
   }
   article h2 {
