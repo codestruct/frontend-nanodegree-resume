@@ -54,6 +54,50 @@ body {
 }
 
 
+// Header 
+// --------------------------------------------------
+
+.welcome {
+  padding: 10px 35px 0 35px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.welcome .welcome-message {
+  color: @gray-light;
+  font-size: 16px;
+  line-height: 1.35em;
+  letter-spacing: 0.05em;
+}
+
+.bio-info {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.flex-box li {
+  padding: 10px 0 0 0;
+}
+
+#topContacts {
+  font-size: 14px;
+  color: @gray-light;
+}
+
+#topContacts .glyphicon {
+  font-size: @font-size-base;
+}
+
+
 // Nav
 // --------------------------------------------------
 
@@ -71,7 +115,7 @@ h1#name {
 }
 
 .navbar-default .navbar-brand {
-  color: @gray;
+  color: #000;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -217,8 +261,14 @@ ul {
 }
 
 a {
-  color: #1199c3;
+  color: @gray-light;
   text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: @secondary;
+  text-decoration: underline;
 }
 
 .welcome-message {
@@ -236,17 +286,24 @@ article h2 {
 }
 
 #skills-h3 {
-  color: #f5ae23;
-  display: none;
+  color: @gray-light;
   font-variant: normal;
   font-size: @font-size-base;
+  text-transform: uppercase;
 }
 
-.white-text {
-  font-weight: 400;
-  color: #fff;
+span.skills {
+  color: @gray-light;
 }
 
+.orange-text {
+  color: @brand-primary;
+}
+
+.glyphicon-star {
+  font-size: @font-size-small;
+  color: @brand-primary;
+}
 
 // Sections
 // --------------------------------------------------
@@ -270,31 +327,13 @@ article h2 {
   background-color: @gray-lighter;
 }
 
-.welcome {
-  padding: 10px 35px 0 35px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.welcome .welcome-message {
+h3.education  {
+  text-transform: uppercase;
+  font-weight: 300;
   color: @gray-light;
-  font-size: 16px;
-  line-height: 1.35em;
-  letter-spacing: 0.05em;
-}
-
-.bio-info {
-  margin: 0 auto;
-  width: 30%;
-}
-
-.flex-item {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
+  line-height: 2em;
+  border-top: 1px solid @gray-light;
+  border-bottom: 1px solid @gray-light;
 }
 
 
@@ -335,7 +374,15 @@ article h2 {
 
 
 h3 span:hover{
-  background: lighten(@secondary, 20%);
+  background: lighten(@secondary, 40%);
+}
+
+.item h4 span:hover{
+  background: lighten(@secondary, 40%);
+}
+
+.item a {
+    text-decoration: none;
 }
 
 h3.workTitle {
@@ -351,11 +398,7 @@ h3.workTitle {
 .location-text {
   color: @gray-light;
   font-size: 14px;
-}
-
-.date-text,
-.location-text {
-  font-style: italic;
+  font-style: normal;
 }
 
 
@@ -375,16 +418,34 @@ h3.workTitle {
 // isotope
 // --------------------------------------------------
 
+.projectFilter {
+  margin: 20px 0;
+  background-color: #f5f5f5;
+}
+
 .projectFilter a { 
-    margin-right: 10px; 
-    color:#666;
-    text-decoration:none;
+  text-decoration:none;
+  font-weight: 300px;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 50px;
+  padding: 15px;
+  margin: 0 0 0 2px;
+  color: @gray;
+  background-color: lighten(@gray-light, 45%);
+}
+
+.projectFilter a:hover { 
+  color: @secondary;
+  background-color: lighten(@gray-lighter, 5%);
+  text-decoration: underline;
 }
  
 .projectFilter a.current { 
-    font-weight:bold;
+  color: @brand-primary;
 }
- 
+
 img {
     margin:5px;
 }
@@ -425,30 +486,29 @@ img {
           transition-property:         transform, opacity;
 }
 
-/* Helen's css for isotope */
-
-.projectFilter {
-  margin: 10px 0 10px 15px;
-}
-
 .item {
   padding: 5px 0 0 0;
-  max-height: 280px;
+  max-height: 300px;
+
 }
 
 .item h4 {
   font-weight: 300;
-  font-size: 16px;
-  color: @gray-light;
+  font-size: @font-size-small;
+  color: @brand-primary;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  vertical-align: bottom;
+  margin-bottom: 0;
 }
 
 .item.web img {
-  margin: 15px 0 0 0;
+  margin: 5px 0 10px 0;
 }
 
 .item.design img {
-  margin: 15px 0 0 0;
+  margin: 5px 0 10px 0;
 }
 
 // Media queries to handle various device widths
@@ -494,7 +554,7 @@ img {
   }
 
   .welcome {
-    padding: 20px 75px 0 75px;
+    padding: 20px 95px 0 95px;
   }
 
   .welcome .welcome-message {
@@ -511,6 +571,11 @@ img {
     clear:both;
   }
 
+  #education {
+    margin-top: -10px;
+    padding-bottom: 20px;
+  }
+
   article h2 {
   font-size: 24px;
   }
@@ -525,14 +590,11 @@ img {
   #bs-example-navbar-collapse-1 {
     border-top: none;
   }
-}
 
-@media only screen and (min-width: 480px) {
-  /*
-  .navbar-header {
-    float: left;
+  .flex-box {
+    display: block;
+    text-align: center; 
   }
-  */
 }
 
 @media only screen and (max-width: 480px){
