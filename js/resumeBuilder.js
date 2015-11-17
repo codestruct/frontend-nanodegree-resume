@@ -18,6 +18,19 @@ var bio = {
 	"skills" : ["HTML 5", "CSS 3", "JavaScript", "Build Responsive Website", "BootStrap", "Create Wireframe","WordPress CMS"],
 	"bioPict" : "images/New_Profile_2015_300x300.jpg"
 };
+
+//contact object -----------------------------------------------------//
+var contact = {
+	"email" : "hello@helenshiu.com",
+	"phone" : "4166288054",
+	"github" : "https://github.com/quilt9",
+	"twitter" : "@quilt9design",
+	"linkedin" : "https://www.linkedin.com/in/helenshiu",
+	"resume" : "pdf/helen-shiu.pdf",
+	"city" : "Toronto, Canada",
+	"location" : "1048 Broadview ave., Toronto, Canada"
+};
+
 bio.display = function(){
 
  	var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -51,10 +64,6 @@ bio.display = function(){
 
 }
 bio.display();
-
-
-
-
 
 //work object -----------------------------------------------------//
 var work = {

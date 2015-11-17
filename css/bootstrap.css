@@ -6793,14 +6793,6 @@ body {
 #wrapper {
   background-color: #eeeeee;
 }
-#header {
-  min-height: 840px;
-  background-image: url(../images/to_skyline.png);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: 100%;
-  position: relative;
-}
 .container {
   border: 20px solid #fff;
 }
@@ -6822,6 +6814,18 @@ body {
     margin: 0 auto;
   }
 }
+#header {
+  min-height: 600px;
+  background-image: url(../images/to_skyline.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  position: relative;
+}
+#home {
+  padding: 115px 0 0px 0;
+  clear: both;
+}
 .welcome {
   padding: 10px 35px 0 35px;
   margin: 0 auto;
@@ -6837,20 +6841,24 @@ body {
   margin: 0 auto;
   width: 100%;
 }
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.biopic {
   padding: 10px;
-}
-.flex-box li {
-  padding: 10px 0 0 0;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  width: 30%;
 }
 #topContacts {
   font-size: 14px;
   color: #777777;
+  text-align: center;
+}
+ul#topContacts {
+  margin: 0 auto;
+  padding: 0;
+}
+#topContacts li {
+  padding: 5px 0 0 0;
 }
 #topContacts .glyphicon {
   font-size: 14px;
@@ -7012,13 +7020,15 @@ span.skills {
   font-size: 12px;
   color: #ff3300;
 }
-#home,
 #workExperience,
 #projects,
 #education,
 #lets-connect {
   padding: 110px 0 0px 0;
   clear: both;
+}
+#lets-connect {
+  padding: 20px 0 0px 0;
 }
 .gray {
   color: #222222;
@@ -7028,13 +7038,55 @@ span.skills {
   color: #222222;
   background-color: #eeeeee;
 }
-h3.education {
+.education-entry h3.education {
   text-transform: uppercase;
   font-weight: 300;
   color: #777777;
   line-height: 2em;
   border-top: 1px solid #777777;
   border-bottom: 1px solid #777777;
+  font-size: 12px;
+  margin: 10px 0 5px 0;
+}
+.education-entry h3 {
+  font-size: 18px;
+  margin: 10px 0 5px 0;
+}
+.education-entry h4 {
+  font-size: 14px;
+  margin: 0;
+}
+.education-entry p {
+  margin: 0;
+}
+span.location-text,
+.learn {
+  font-size: 12px;
+}
+.graphic,
+.ux,
+.development {
+  padding-bottom: 10px;
+}
+#footerContacts.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  float: left;
+}
+ul#footerContacts.flex-box {
+  padding-top: 0;
+  margin: 0 auto;
+}
+#footerContacts.flex-box li {
+  font-size: 12px;
+  padding-right: 25px;
+}
+#footerContacts.flex-box li:last-child {
+  padding-bottom: 0;
 }
 #accordion p {
   margin-bottom: 0;
@@ -7083,13 +7135,6 @@ h3.workTitle {
   color: #777777;
   font-size: 14px;
   font-style: normal;
-}
-.biopic {
-  padding: 10px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-  width: 50%;
 }
 .projectFilter {
   margin: 20px 0;
@@ -7173,11 +7218,6 @@ img {
     margin-top: 5%;
   }
 }
-@media only screen and (max-width: 900px) {
-  .biopic {
-    width: 175px;
-  }
-}
 @media only screen and (min-width: 768px) {
   h1#name {
     font-family: Pacifico, "Times New Roman", Times, cursive;
@@ -7209,8 +7249,7 @@ img {
   #home,
   #workExperience,
   #projects,
-  #education,
-  #lets-connect {
+  #education {
     padding: 80px 0 0px 0;
     clear: both;
   }
@@ -7221,29 +7260,121 @@ img {
   article h2 {
     font-size: 24px;
   }
-  #lets-connect {
-    margin-top: 10%;
-  }
   .biopic {
     width: 150px;
   }
   #bs-example-navbar-collapse-1 {
     border-top: none;
   }
+  h3.education {
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #777777;
+    line-height: 2em;
+    border-top: 1px solid #777777;
+    border-bottom: 1px solid #777777;
+    font-size: 16px;
+  }
+  .item h4 {
+    font-weight: 300;
+    font-size: 12px;
+    color: #ff3300;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    vertical-align: bottom;
+    margin-bottom: 0;
+  }
   .flex-box {
     display: block;
     text-align: center;
   }
 }
+/* ----------- iPad mini ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  #header {
+    min-height: 780px;
+  }
+  .flex-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  ul#topContacts {
+    width: 50%;
+  }
+}
+/* Portrait */
+/* Landscape */
+/* ----------- iPad 1 and 2 ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  #header {
+    min-height: 780px;
+  }
+  .flex-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  ul#topContacts {
+    width: 50%;
+  }
+}
+/* Portrait */
+/* Landscape */
+/* ----------- iPad 3 and 4 ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  #header {
+    min-height: 750px;
+  }
+  .flex-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  ul#topContacts {
+    width: 50%;
+  }
+}
+/* Portrait */
+/* Landscape */
+/* ----------- Galaxy S4 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+@media screen and (min-device-width: 360px) and (max-device-width: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  .biopic {
+    width: 20%;
+  }
+}
+/* ----------- Galaxy S5 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+@media screen and (min-device-width: 360px) and (max-device-width: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  .biopic {
+    width: 20%;
+  }
+}
 #map {
   display: block;
   height: 100%;
-  margin: 0 5%;
+  margin: 20px 0 0 0;
 }
 #mapDiv {
   height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
 }
 @media only screen and (min-width: 750px) {
   #skills-h3,
