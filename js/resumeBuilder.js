@@ -14,21 +14,9 @@ var bio = {
 		"city" : "Toronto, Canada",
 		"location" : "1048 Broadview ave., Toronto, Canada"
 		},
-	"welcome" : "Hello! I am a multi-skilled Web Designer/Front End Developer who thrives in challenging, fast-paced, and team-oriented environment.",
+	"welcome" : "Hello! I am a Web Designer/Developer with a focus on Front-End Programming. I enjoy building engaging visuals and good user interactions of the web.",
 	"skills" : ["HTML 5", "CSS 3", "JavaScript", "Build Responsive Website", "BootStrap", "Create Wireframe","WordPress CMS"],
 	"bioPict" : "images/New_Profile_2015_300x300.jpg"
-};
-
-//contact object -----------------------------------------------------//
-var contact = {
-	"email" : "hello@helenshiu.com",
-	"phone" : "4166288054",
-	"github" : "https://github.com/quilt9",
-	"twitter" : "@quilt9design",
-	"linkedin" : "https://www.linkedin.com/in/helenshiu",
-	"resume" : "pdf/helen-shiu.pdf",
-	"city" : "Toronto, Canada",
-	"location" : "1048 Broadview ave., Toronto, Canada"
 };
 
 bio.display = function(){
@@ -197,16 +185,16 @@ var allProjects = {
             "modalPict" : "images/hofalnd_corporate_big.jpg"
         },
         {
-            "title": "eMail Campaign Design for MailChimp",
-            "dates": "2015",
+            "title": "WordPress Website Design/Development",
+            "dates": "2011",
             "type" : "design",
-            "description": "Design the X'mas eCampaign for MailChimp email distribution.",
+            "description": "Created corporate Branding, designed and developed the corporate site on Drupal.",
             "images": {
-                "src": "images/Email_Campaign_Design_2_T.jpg",
-                "name": "eCampaign Design for MailChimp",
-                "alt" : "eCampaign Design for MailChimp"
+                "src": "images/bee_T.jpg",
+                "name": "Drupal Website Design/Development",
+                "alt" : "Drupal Website Design/Development"
             },
-            "modalPict" : "images/Email_Campaign_Design.png"
+            "modalPict" : "images/beenetworx_web_big.jpg"
         },
         {
             "title": "Infographic Design",
@@ -286,9 +274,33 @@ projects.display = function(){
 projects.display();
 
 
-
 //To see a map
 $('#mapDiv').append(googleMap);
+
+//contact object -----------------------------------------------------//
+var contact = {
+	"email" : "hello@helenshiu.com",
+	"phone" : "4166288054",
+	"github" : "https://github.com/quilt9",
+	"twitter" : "@quilt9design",
+	"linkedin" : "https://www.linkedin.com/in/helenshiu",
+	"resume" : "pdf/helen-shiu.pdf",
+	"city" : "Toronto, Canada",
+	"location" : "1048 Broadview ave., Toronto, Canada"
+};
+
+contact.display = function() {
+
+	var formattedContact = HTMLemail.replace("%data%", contact.email);
+	var formattedResume = HTMLresume.replace("%data%", contact.resume);
+	var formattedMobile = HTMLmobile.replace("%data%", contact.phone);
+	var formattedLocation = HTMLlocation.replace("%data%", contact.city);
+	$("ul#footerContacts").append(formattedMobile);
+	$("ul#footerContacts").append(formattedContact);
+	$("ul#footerContacts").append(formattedResume);
+	$("ul#footerContacts").append(formattedLocation);
+}
+contact.display();
 
 
 

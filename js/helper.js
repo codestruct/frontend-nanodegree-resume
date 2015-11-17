@@ -21,7 +21,7 @@ var HTMLemail = '<li class="flex-item"><span class="orange-text"><span class="gl
 var HTMLtwitter = '<li><span class="orange-text">twitter</span><span>%data%</span></li>';
 var HTMLgithub = '<li><span class="orange-text">github</span><span>%data%</span></li>';
 var HTMLblog = '<li><span class="orange-text">blog</span><span>%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span>%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="orange-text"><span class="glyphicon glyphicon-map-marker"></span> </span><span>%data%</span></li>';
 
 var HTMLresume = '<li class="flex-item"><span class="orange-text"><span class="glyphicon glyphicon-save"></span> </span><span><a class="resume" href="%data%" download="filename">resume</a></span></li>';
 
