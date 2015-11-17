@@ -14,14 +14,15 @@ The <head> of a website generally links to important resources the page will
 need to load. You'll see a lot of <link>s to CSS files for styles and
 <scripts> for JavaScript files to build interactions.
 -->
+
 <head>
-  <!-- This tells the browser how to read the document. -->
-  <meta charset="utf-8">
+    <!-- This tells the browser how to read the document. -->
+    <meta charset="utf-8">
 
-  <!-- Tells the browser what the title of this page should be. -->
-  <title>Resume</title>
+    <!-- Tells the browser what the title of this page should be. -->
+    <title>Resume</title>
 
-  <!--
+    <!--
   jQuery is a common JavaScript library for reading and making changes to the
   Document Object Model (DOM). The DOM is a tree that contains information
   about what is actually visible on a website.
@@ -34,42 +35,43 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   the DOM. jQuery is fast and easy to use, but it doesn't do anything
   you can't accomplish with vanilla (regular) JavaScript.
   -->
-  <script src="js/jQuery.js"></script>
+    <script src="js/jQuery.js"></script>
 
-  <!-- More on helper.js in the class -->
-  <script src="js/helper.js"></script>
+    <!-- More on helper.js in the class -->
+    <script src="js/helper.js"></script>
 
-  <!-- Add isotope -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
-  <script src="js/jquery.isotope.js"></script> 
+    <!-- Add isotope -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.js"></script>
 
-  <!--
+    <!--
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
-  <meta name="viewport" content="width=device-width">
-  <!-- Bootstrap -->
-  <link href="css/bootstrap.css" rel="stylesheet">
-  
+    <meta name="viewport" content="width=device-width">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
 </head>
+
 <body>
-  <div id="wrapper">
-    <div class="container">
-      <!--
+    <div id="wrapper">
+        <div class="container">
+            <!--
       Everything from here to the <script> tag below is the skeleton of your
       website. Your code will add information to each of the sections of the
       resume below. You can pretty easily figure out what each section will
       display by looking at the id or at what's written between the <h2> tags.
       -->
-      <div id="header" class="clear-fix row">
-        <header id="home">
-          <nav id="top-nav" class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                <!--
+            <div id="header" class="clear-fix row">
+                <header id="home">
+                    <nav id="top-nav" class="navbar navbar-default navbar-fixed-top">
+                        <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <!--
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
                   <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
@@ -77,51 +79,63 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
                   <span class="icon-bar"></span>
                 </button>
               -->
-                <a class="navbar-brand" rel="home" href="#home" title="Helen Shiu - Design & Develop"></a>
-              </div>
+                                <a class="navbar-brand" rel="home" href="#home" title="Helen Shiu - Design & Develop"></a>
+                            </div>
 
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div id="bs-example-navbar-collapse-1">
-                <ul class="navbar navbar-nav text-uppercase navbar-right">
-                  <li><a href="#workExperience">Work</a></li>
-                  <li><a href="#projects">Projects</a></li>
-                  <li><a href="#education">Education</a></li>
-                  <li><a href="#lets-connect">Contact</a></li>
-                </ul>
-              </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-          </nav>
-          <div class="welcome">
-          </div><!-- /.welcome -->
-          <div class="bio-info">
-            <ul id="topContacts" class="flex-box"></ul>
-          </div><!-- /.bio-info -->
-        </header>        
-      </div><!-- /#header -->
-      <div style="clear: both;"></div>
-      <article>
-        <div name="work" id="workExperience" class="row dark-gray">
-            <h2>Work Experience</h2>
-        </div><!-- /#workExperience -->
-        <div name="projects" id="projects" class="row gray">
-            <h2>Projects</h2>
-        </div><!-- /#projects -->
-        <div name="education" id="education" class="row dark-gray">
-            <h2>Education</h2>
-        </div><!-- /#education -->
-        <div id="mapDiv" class="row">
-            <h2>Places I've Lived and Worked</h2>
-        </div><!-- /#mapDiv -->
-        <div name="contact" id="lets-connect" class="row gray">
-            <h2 class="orange center-text">Let's Connect</h2>
-            <ul id="footerContacts" class="flex-box">
-            </ul>
-        </div><!-- /#lets-connect -->
-      </article>
-    </div><!-- /.container -->
-  </div><!-- /#wrapper -->
-    
-  <!--
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div id="bs-example-navbar-collapse-1">
+                                <ul class="navbar navbar-nav text-uppercase navbar-right">
+                                    <li><a href="#workExperience">Work</a></li>
+                                    <li><a href="#projects">Projects</a></li>
+                                    <li><a href="#education">Education</a></li>
+                                    <li><a href="#lets-connect">Contact</a></li>
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container-fluid -->
+                    </nav>
+                    <div class="welcome">
+                    </div>
+                    <!-- /.welcome -->
+                    <div class="bio-info">
+                        <ul id="topContacts" class="flex-box"></ul>
+                    </div>
+                    <!-- /.bio-info -->
+                </header>
+            </div>
+            <!-- /#header -->
+            <div style="clear: both;"></div>
+            <article>
+                <div id="workExperience" class="row dark-gray">
+                    <h2>Work Experience</h2>
+                </div>
+                <!-- /#workExperience -->
+                <div id="projects" class="row gray">
+                    <h2>Projects</h2>
+                </div>
+                <!-- /#projects -->
+                <div id="education" class="row dark-gray">
+                    <h2>Education</h2>
+                </div>
+                <!-- /#education -->
+                <div id="mapDiv" class="row">
+                    <h2>Places I've Lived and Worked</h2>
+                </div>
+                <!-- /#mapDiv -->
+                <div id="lets-connect" class="row gray">
+                    <h2 class="orange center-text">Let's Connect</h2>
+                    <ul id="footerContacts" class="flex-box">
+                    </ul>
+                </div>
+                <!-- /#lets-connect -->
+            </article>
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!--
   The next line tells the browser where to download the JavaScript file you'll be
   writing. In resumeBuilder.js, you'll be writing code that builds the resume
   dynamically when this website, index.html, is opened.
@@ -129,7 +143,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <script src="js/resumeBuilder.js"></script>
     <script src="js/resumeBuilder2.js"></script>
 
-  <!--
+    <!--
   These scripts are written in JavaScript. You'll be breaking them down as part of
   a quiz. Essentially, the next few lines are checking to see if you have not
   changed each section of the resume. If you have not made any changes to a section
@@ -137,91 +151,94 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   course.
   -->
 
-  <script type="text/javascript">
-    // Notice how all of a sudden there's JavaScript inside this HTML
-    // document? You can write JavaScript between <script> tags. At the end of your
-    // JavaScript, don't forget the closing script tag with the slash (/).
+    <script type="text/javascript">
+        // Notice how all of a sudden there's JavaScript inside this HTML
+        // document? You can write JavaScript between <script> tags. At the end of your
+        // JavaScript, don't forget the closing script tag with the slash (/).
 
 
-    // Also, this is a JavaScript style comment. You can comment in JavaScript with:
+        // Also, this is a JavaScript style comment. You can comment in JavaScript with:
 
-    //   two slashes for all following characters on a single line, or
+        //   two slashes for all following characters on a single line, or
 
-    /*
-        an opening and closing set of slash asterisks for block comments.
-    */
+        /*
+            an opening and closing set of slash asterisks for block comments.
+        */
 
 
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
-    }
-    if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
-    }
-    if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
-    }
-    if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
-    }
-    if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
-    }
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'none';
-    }
-    if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
-    }
-  </script>
-
-  <!-- javascript -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-
-  <!-- isotope -->
-  <script src="js/isotope.pkgd.min.js"></script>
-
-  <script type="text/javascript">
-    $(window).load(function(){
-      var $container = $('.projectContainer');
-      $container.isotope({
-        filter: '*',
-        animationOptions: {
-          duration: 750,
-          easing: 'linear',
-          queue: false
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('topContacts').style.display = 'none';
         }
-      });
- 
-      $('.projectFilter a').click(function(){
-        $('.projectFilter .current').removeClass('current');
-        $(this).addClass('current');
- 
-        var selector = $(this).attr('data-filter');
-        $container.isotope({
-          filter: selector,
-          animationOptions: {
-            duration: 750,
-            easing: 'linear',
-            queue: false
-          }
-         });
-         return false;
-      }); 
-    });
-  </script>
+        if (document.getElementsByTagName('h1').length === 0) {
+            document.getElementById('header').style.display = 'none';
+        }
+        if (document.getElementsByClassName('work-entry').length === 0) {
+            document.getElementById('workExperience').style.display = 'none';
+        }
+        if (document.getElementsByClassName('project-entry').length === 0) {
+            document.getElementById('projects').style.display = 'none';
+        }
+        if (document.getElementsByClassName('education-entry').length === 0) {
+            document.getElementById('education').style.display = 'none';
+        }
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('lets-connect').style.display = 'none';
+        }
+        if (document.getElementById('map') === null) {
+            document.getElementById('mapDiv').style.display = 'none';
+        }
+    </script>
 
-  <!-- one-page scroll -->
-  <script src="js/jquery.nav.js"></script>
-  <script src="js/jquery.scrollTo.min.js"></script>
+    <!-- javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
-  <script type="text/javascript">// <![CDATA[
-  $('#top-nav').onePageNav({
-           currentClass: 'active',
-           changeHash: true,
-           scrollSpeed: 1200
-           });
-// ]]></script>
+    <!-- isotope -->
+    <script src="js/isotope.pkgd.min.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function() {
+            var $container = $('.projectContainer');
+            $container.isotope({
+                filter: '*',
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+
+            $('.projectFilter a').click(function() {
+                $('.projectFilter .current').removeClass('current');
+                $(this).addClass('current');
+
+                var selector = $(this).attr('data-filter');
+                $container.isotope({
+                    filter: selector,
+                    animationOptions: {
+                        duration: 750,
+                        easing: 'linear',
+                        queue: false
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+
+    <!-- one-page scroll -->
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+
+    <script type="text/javascript">
+        // <![CDATA[
+        $('#top-nav').onePageNav({
+            currentClass: 'active',
+            changeHash: true,
+            scrollSpeed: 1200
+        });
+        // ]]>
+    </script>
 </body>
+
 </html>
