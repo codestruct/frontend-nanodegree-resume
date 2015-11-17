@@ -53,9 +53,6 @@ bio.display = function(){
 bio.display();
 
 
-
-
-
 //work object -----------------------------------------------------//
 var work = {
 	"jobs" : [
@@ -277,9 +274,7 @@ projects.display = function(){
 projects.display();
 
 
-
 //To see a map
 $('#mapDiv').append(googleMap);
-
 
 
